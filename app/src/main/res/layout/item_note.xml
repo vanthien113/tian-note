@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorGrayMineShaft"
+    app:cardCornerRadius="@dimen/dp_10">
+
+    <ru.rambler.libs.swipe_layout.SwipeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContentParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunito_regular"
+                android:paddingHorizontal="@dimen/dp_40"
+                android:paddingVertical="@dimen/dp_30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_25"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Book Review : The Design of Everyday Things by Don Norman" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/flDeleteNote"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:background="@color/colorRed"
+            android:foreground="?attr/selectableItemBackground"
+            app:gravity="right">
+
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_37"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </FrameLayout>
+    </ru.rambler.libs.swipe_layout.SwipeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tian Note</string>
+    <string name="welcome">Welcome</string>
+    <string name="notes">Notes</string>
+    <string name="create_your_first_note">Create your first note !</string>
+    <string name="title">Title</string>
+    <string name="type_something">Type something...</string>
+    <string name="discard">Discard</string>
+    <string name="save_change">Save changes ?</string>
+    <string name="save">Save</string>
+    <string name="msg_discard_change">Are your sure you want discard your changes ?</string>
+    <string name="keep">Keep</string>
+    <string name="msg_empty_content">Please input note content!</string>
+    <string name="msg_empty_title">Please input note title!</string>
+    <string name="got_it">Got it</string>
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+    <string name="msg_info">This source base created by vanthien113.\nThank you</string>
+    <string name="thanks">Thanks</string>
+</resources>

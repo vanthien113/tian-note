@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayMineShaft">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_24"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="23dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btBack"
+            style="@style/MaterialButtonIconStyle"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_back"
+            app:iconSize="@dimen/dp_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btColorPicker"
+            style="@style/MaterialButtonIconStyle"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:backgroundTint="@color/colorPurpleMauve"
+            app:iconSize="@dimen/dp_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cornerRadius="@dimen/dp_15"
+            app:layout_constraintEnd_toStartOf="@+id/btVisible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btVisible"
+            style="@style/MaterialButtonIconStyle"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:backgroundTint="@color/colorGrayMineShaftLight"
+            app:icon="@drawable/ic_visible"
+            app:iconSize="@dimen/dp_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btSave"
+            style="@style/MaterialButtonIconStyle"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            app:icon="@drawable/ic_save"
+            app:iconSize="@dimen/dp_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/colorGrayMineShaft" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="@string/title"
+        android:maxLines="3"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorGrayDusty"
+        android:textSize="@dimen/sp_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="top|start"
+        android:hint="@string/type_something"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorGrayDusty"
+        android:textSize="@dimen/sp_23"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

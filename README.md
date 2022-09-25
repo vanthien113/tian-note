@@ -10,3 +10,10 @@ Technical:
 - Couroutine
 - LiveData
 - ...
+
+
+<img src="https://github.com/vanthien113/tian-note/blob/master/resouce/screenshoot/Screenshot_20220925_152537.png" width="300"/>
+
+<img src="https://github.com/vanthien113/tian-note/blob/master/resouce/screenshoot/Screenshot_20220925_152704.png" width="300"/>
+
+<img src="https://github.com/vanthien113/tian-note/blob/master/resouce/screenshoot/Screenshot_20220925_152717.png" width="300"/>

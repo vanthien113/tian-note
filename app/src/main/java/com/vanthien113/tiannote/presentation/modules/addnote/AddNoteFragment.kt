@@ -88,6 +88,7 @@ open class AddNoteFragment : BaseMVVMFragment<FragmentAddNoteBinding, AddNoteVie
 
     override fun registerViewModelObs() {
         getViewModel().validateErrorObs.observe(viewLifecycleOwner) {
+            it ?: return@observe
             when (it) {
                 AddNoteViewModel.InputError.EMPTY_TITLE -> {
                     CommonDialog(

@@ -8,7 +8,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.viewbinding.ViewBinding
-import com.vanthien113.tiannote.helper.CloudLogHelper
 
 /**
  * The type Base mvvm fragment.
@@ -132,7 +131,6 @@ abstract class BaseMVVMFragment<V : ViewBinding, VM : BaseViewModel> : BaseFragm
                 changeLoadingState(false)
                 doOnError?.invoke(state.throwable) ?: handleError(state.throwable)
                 doOnFinish?.invoke()
-                CloudLogHelper.getInstance().logError(state.throwable)
             }
             if (state.isSuccess) {
                 changeLoadingState(false)

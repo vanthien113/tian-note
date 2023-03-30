@@ -1,4 +1,6 @@
 # tian-note
+Playstore link: https://play.google.com/store/apps/details?id=com.vanthien113.tiannote
+
 Language: Kotlin
 
 Architecture: MVVM with Clean Architecture

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.vanthien113.tiannote">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:name="com.vanthien113.tiannote.presentation.App"
@@ -17,7 +16,8 @@
         <activity
             android:name="com.vanthien113.tiannote.presentation.modules.main.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

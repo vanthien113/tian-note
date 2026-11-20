@@ -40,13 +40,13 @@ public abstract class BaseMVVMActivity<V extends ViewBinding, VM extends BaseVie
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = getLayoutBinding();
+        setupEdgeToEdge(binding.getRoot(), R.color.colorGrayMineShaft);
         setContentView(binding.getRoot());
         viewModel = new ViewModelProvider(this).get(getViewModelClass());
         registerViewModelObs();
         registerBaseViewModelObs();
         registerViewEvent();
         initialize();
-        changeStatusBarColor(R.color.colorGrayMineShaft);
     }
 
     private void registerBaseViewModelObs() {

@@ -1,11 +1,18 @@
 package com.vanthien113.tiannote.presentation.base
 
+import android.graphics.Color
 import android.view.MotionEvent
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.vanthien113.tiannote.shared.widget.LoadingDialog
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -29,8 +36,28 @@ abstract class BaseActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    protected fun changeStatusBarColor(color: Int) {
-        window?.statusBarColor = ContextCompat.getColor(this, color)
+    /**
+     * Edge-to-edge is enforced from targetSdk 35, so the system bars can no longer be colored
+     * (window.statusBarColor is ignored). Draw behind transparent bars instead, fill [root] with
+     * [backgroundColor] so the area behind them keeps the app color, and pad [root] by the
+     * system bar / display cutout / keyboard insets so content stays clear of them.
+     */
+    protected fun setupEdgeToEdge(root: View, @ColorRes backgroundColor: Int) {
+        // Dark style = light status/navigation bar icons, matching the dark app background
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
+        )
+        root.setBackgroundColor(ContextCompat.getColor(this, backgroundColor))
+        ViewCompat.setOnApplyWindowInsetsListener(root) { view, insets ->
+            val bars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or
+                    WindowInsetsCompat.Type.displayCutout() or
+                    WindowInsetsCompat.Type.ime()
+            )
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
     }
 
     /**

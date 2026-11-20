@@ -50,6 +50,7 @@ class HomeFragment : BaseMVVMFragment<FragmentHomeBinding, HomeViewModel>() {
 
     override fun initialize() {
         initViews()
+        getViewModel()
     }
 
     override fun onResume() {

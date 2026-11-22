@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Tian Note</title>
+  <meta name="description" content="Privacy Policy for the Tian Note Android app (com.vanthien113.tiannote). Your notes stay on your device.">
+  <style>
+    :root {
+      --bg: #f7f6f8;
+      --surface: #ffffff;
+      --text: #1f1c1f;
+      --muted: #5f5a60;
+      --border: #e4dfe5;
+      --accent: #a6239f;
+      --accent-soft: #fbe9fc;
+      --dot: #fd99ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1b1a1b;
+        --surface: #252525;
+        --text: #ececec;
+        --muted: #a9a5aa;
+        --border: #3b3b3b;
+        --accent: #fd99ff;
+        --accent-soft: #3a2a3b;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    header { margin-bottom: 28px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .brand .dot {
+      width: 14px; height: 14px;
+      border-radius: 4px;
+      background: var(--dot);
+      flex: none;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 12px 0 6px;
+    }
+    .meta { color: var(--muted); font-size: 14px; margin: 0; }
+
+    .lang-switch {
+      display: none;
+      gap: 4px;
+      margin-top: 18px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      width: fit-content;
+    }
+    .js .lang-switch { display: flex; }
+    .lang-switch button {
+      font: inherit;
+      font-size: 14px;
+      border: 0;
+      border-radius: 7px;
+      padding: 6px 14px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent-soft);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .lang-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* With JS: show one language at a time. Without JS: both stay visible. */
+    .js [data-lang]:not(.active) { display: none; }
+    article + article { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .js article + article { margin-top: 0; padding-top: 0; border-top: 0; }
+
+    .summary {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 0 0 32px;
+    }
+    .summary p { margin: 0; }
+
+    h2 {
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 36px 0 10px;
+    }
+    p, ul { margin: 0 0 14px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-underline-offset: 2px; overflow-wrap: anywhere; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 5px;
+      overflow-wrap: anywhere;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    tr:last-child td { border-bottom: 0; }
+    th { font-weight: 600; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><span class="dot" aria-hidden="true"></span>Tian Note</div>
+    <h1>
+      <span data-lang="en">Privacy Policy</span>
+      <span data-lang="vi" lang="vi">Chính sách quyền riêng tư</span>
+    </h1>
+    <p class="meta">
+      <span data-lang="en">Effective date: November 22, 2026</span>
+      <span data-lang="vi" lang="vi">Ngày hiệu lực: 22/11/2026</span>
+    </p>
+    <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+      <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-set-lang="vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
+  </header>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <article data-lang="en" lang="en">
+    <div class="summary">
+      <p><strong>In short:</strong> Tian Note does not collect, transmit, sell or share any personal data. The app has no account system, no ads, no analytics and no internet access. Your notes are stored only on your device.</p>
+    </div>
+
+    <p>This Privacy Policy explains how the <strong>Tian Note</strong> Android app (package name <code>com.vanthien113.tiannote</code>, the “App”) handles your information. The App is developed and published by the independent developer <strong>vanthien113</strong> (“the developer”, “we”, “us”).</p>
+
+    <h2>1. Information stored by the App</h2>
+    <p>When you use the App, it saves the notes you create on your device:</p>
+    <table>
+      <thead><tr><th>Data</th><th>Purpose</th><th>Where it is kept</th></tr></thead>
+      <tbody>
+        <tr><td>Note title and content</td><td>To show and edit your notes</td><td rowspan="3">A local database in the App’s private storage on your device</td></tr>
+        <tr><td>Note color</td><td>To display the color you picked</td></tr>
+        <tr><td>Date and time the note was saved</td><td>To show and sort your notes</td></tr>
+      </tbody>
+    </table>
+    <p>This data never leaves your device through the App. The developer has no access to it and no copy of it.</p>
+
+    <h2>2. Information we do not collect</h2>
+    <ul>
+      <li>We do not ask you to create an account or sign in.</li>
+      <li>We do not collect your name, email address, phone number or any other contact details.</li>
+      <li>We do not access your location, contacts, photos, files, camera or microphone. The App requests no Android permissions for these.</li>
+      <li>We do not collect device identifiers or the advertising ID.</li>
+      <li>We do not use analytics, crash reporting, tracking or advertising services.</li>
+      <li>The App does not request internet access, so it cannot send your data anywhere.</li>
+    </ul>
+
+    <h2>3. Third-party services</h2>
+    <p>The App contains no third-party advertising, analytics or tracking SDKs. It uses open-source libraries (such as Android Jetpack and Room) that run entirely on your device and do not collect data.</p>
+    <p>You download the App from Google Play. Google’s handling of your data for downloads, installs and updates is covered by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>, not by this policy.</p>
+
+    <h2>4. Android backup and device transfer</h2>
+    <p>The App supports Android’s built-in backup. If you have turned on backup in your device settings, Android may include your notes in the backup saved to your Google account, or copy them when you move to a new device. Google runs this process under your Google account. The developer cannot access these backups.</p>
+    <p>You can turn backup off in your device settings (usually <em>Settings › Google › Backup</em>; the exact path depends on your device).</p>
+
+    <h2>5. Sharing and sale of data</h2>
+    <p>We do not share, sell, rent or trade any information with anyone, because we do not collect any.</p>
+
+    <h2>6. Security</h2>
+    <p>Your notes are kept in the App’s private storage, which other apps cannot read. Android also encrypts device storage on supported devices. The App does not add its own encryption to notes, so anyone who can use your unlocked device can open the App and read them. We recommend using a screen lock.</p>
+
+    <h2>7. Keeping and deleting your data</h2>
+    <p>Your notes stay on your device until you delete them. You are always in control:</p>
+    <ul>
+      <li><strong>Delete one note:</strong> on the note list, swipe the note and tap the delete button.</li>
+      <li><strong>Delete all notes:</strong> go to <em>Settings › Apps › Tian Note › Storage › Clear storage</em>, or uninstall the App. Uninstalling removes all data the App stored on the device.</li>
+    </ul>
+    <p>Because the developer holds none of your data, there is nothing to request deletion of on our side.</p>
+
+    <h2>8. Children’s privacy</h2>
+    <p>The App does not collect personal information from anyone, including children under the age of 13.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes, for example because a new feature handles data differently, we will publish the updated version on this page and change the effective date above.</p>
+
+    <h2>10. Contact</h2>
+    <p>If you have questions about this Privacy Policy, open an issue on the project’s GitHub page: <a href="https://github.com/vanthien113/tian-note/issues" rel="noopener">github.com/vanthien113/tian-note/issues</a>.</p>
+  </article>
+
+  <!-- ============================== TIẾNG VIỆT ============================== -->
+  <article data-lang="vi" lang="vi">
+    <div class="summary">
+      <p><strong>Tóm tắt:</strong> Tian Note không thu thập, gửi đi, bán hay chia sẻ bất kỳ dữ liệu cá nhân nào. Ứng dụng không có tài khoản, không quảng cáo, không phân tích và không truy cập internet. Ghi chú của bạn chỉ được lưu trên thiết bị của bạn.</p>
+    </div>
+
+    <p>Chính sách quyền riêng tư này giải thích cách ứng dụng Android <strong>Tian Note</strong> (tên gói <code>com.vanthien113.tiannote</code>, gọi tắt là “Ứng dụng”) xử lý thông tin của bạn. Ứng dụng được phát triển và phát hành bởi nhà phát triển độc lập <strong>vanthien113</strong> (“nhà phát triển”, “chúng tôi”).</p>
+
+    <h2>1. Thông tin Ứng dụng lưu trữ</h2>
+    <p>Khi bạn sử dụng, Ứng dụng lưu các ghi chú bạn tạo trên thiết bị:</p>
+    <table>
+      <thead><tr><th>Dữ liệu</th><th>Mục đích</th><th>Nơi lưu</th></tr></thead>
+      <tbody>
+        <tr><td>Tiêu đề và nội dung ghi chú</td><td>Hiển thị và chỉnh sửa ghi chú</td><td rowspan="3">Cơ sở dữ liệu cục bộ trong vùng lưu trữ riêng của Ứng dụng trên thiết bị</td></tr>
+        <tr><td>Màu của ghi chú</td><td>Hiển thị màu bạn đã chọn</td></tr>
+        <tr><td>Ngày giờ lưu ghi chú</td><td>Hiển thị và sắp xếp ghi chú</td></tr>
+      </tbody>
+    </table>
+    <p>Ứng dụng không bao giờ gửi dữ liệu này ra khỏi thiết bị. Nhà phát triển không có quyền truy cập và không giữ bản sao nào.</p>
+
+    <h2>2. Thông tin chúng tôi không thu thập</h2>
+    <ul>
+      <li>Chúng tôi không yêu cầu bạn tạo tài khoản hay đăng nhập.</li>
+      <li>Chúng tôi không thu thập họ tên, email, số điện thoại hay bất kỳ thông tin liên hệ nào.</li>
+      <li>Chúng tôi không truy cập vị trí, danh bạ, ảnh, tệp, camera hay micro. Ứng dụng không xin bất kỳ quyền Android nào cho các mục này.</li>
+      <li>Chúng tôi không thu thập mã định danh thiết bị hay mã quảng cáo.</li>
+      <li>Chúng tôi không dùng dịch vụ phân tích, báo cáo lỗi, theo dõi hay quảng cáo.</li>
+      <li>Ứng dụng không xin quyền truy cập internet, nên không thể gửi dữ liệu của bạn đi đâu cả.</li>
+    </ul>
+
+    <h2>3. Dịch vụ bên thứ ba</h2>
+    <p>Ứng dụng không chứa SDK quảng cáo, phân tích hay theo dõi của bên thứ ba. Ứng dụng dùng các thư viện mã nguồn mở (như Android Jetpack và Room), chạy hoàn toàn trên thiết bị và không thu thập dữ liệu.</p>
+    <p>Bạn tải Ứng dụng từ Google Play. Việc Google xử lý dữ liệu khi bạn tải, cài đặt và cập nhật ứng dụng tuân theo <a href="https://policies.google.com/privacy?hl=vi" rel="noopener">Chính sách quyền riêng tư của Google</a>, không thuộc phạm vi chính sách này.</p>
+
+    <h2>4. Sao lưu và chuyển dữ liệu của Android</h2>
+    <p>Ứng dụng hỗ trợ tính năng sao lưu có sẵn của Android. Nếu bạn đã bật sao lưu trong cài đặt thiết bị, Android có thể đưa ghi chú của bạn vào bản sao lưu trên tài khoản Google, hoặc chép chúng sang thiết bị mới khi bạn chuyển máy. Google thực hiện việc này dưới tài khoản Google của bạn. Nhà phát triển không thể truy cập các bản sao lưu này.</p>
+    <p>Bạn có thể tắt sao lưu trong cài đặt thiết bị (thường ở <em>Cài đặt › Google › Sao lưu</em>; đường dẫn cụ thể tùy thiết bị).</p>
+
+    <h2>5. Chia sẻ và bán dữ liệu</h2>
+    <p>Chúng tôi không chia sẻ, bán, cho thuê hay trao đổi thông tin với bất kỳ ai, vì chúng tôi không thu thập thông tin nào.</p>
+
+    <h2>6. Bảo mật</h2>
+    <p>Ghi chú được lưu trong vùng lưu trữ riêng của Ứng dụng, các ứng dụng khác không đọc được. Android cũng mã hóa bộ nhớ thiết bị trên các máy hỗ trợ. Ứng dụng không tự mã hóa thêm ghi chú, nên ai dùng được thiết bị đã mở khóa của bạn đều có thể mở Ứng dụng và đọc chúng. Chúng tôi khuyên bạn nên dùng khóa màn hình.</p>
+
+    <h2>7. Lưu giữ và xóa dữ liệu</h2>
+    <p>Ghi chú được giữ trên thiết bị cho đến khi bạn xóa. Bạn luôn toàn quyền kiểm soát:</p>
+    <ul>
+      <li><strong>Xóa một ghi chú:</strong> ở danh sách ghi chú, vuốt ghi chú và nhấn nút xóa.</li>
+      <li><strong>Xóa toàn bộ ghi chú:</strong> vào <em>Cài đặt › Ứng dụng › Tian Note › Bộ nhớ › Xóa bộ nhớ</em>, hoặc gỡ cài đặt Ứng dụng. Gỡ cài đặt sẽ xóa toàn bộ dữ liệu Ứng dụng đã lưu trên thiết bị.</li>
+    </ul>
+    <p>Vì nhà phát triển không giữ dữ liệu nào của bạn, bạn không cần gửi yêu cầu xóa dữ liệu cho chúng tôi.</p>
+
+    <h2>8. Quyền riêng tư của trẻ em</h2>
+    <p>Ứng dụng không thu thập thông tin cá nhân của bất kỳ ai, kể cả trẻ em dưới 13 tuổi.</p>
+
+    <h2>9. Thay đổi chính sách</h2>
+    <p>Nếu chính sách này thay đổi, ví dụ khi có tính năng mới xử lý dữ liệu theo cách khác, chúng tôi sẽ đăng phiên bản mới trên trang này và cập nhật ngày hiệu lực ở trên.</p>
+
+    <h2>10. Liên hệ</h2>
+    <p>Nếu bạn có câu hỏi về Chính sách quyền riêng tư này, hãy tạo issue trên trang GitHub của dự án: <a href="https://github.com/vanthien113/tian-note/issues" rel="noopener">github.com/vanthien113/tian-note/issues</a>.</p>
+  </article>
+
+  <footer>
+    © 2026 vanthien113 · Tian Note
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+
+    function pick() {
+      var q = new URLSearchParams(location.search).get('lang');
+      var h = location.hash.replace('#', '');
+      if (q === 'vi' || q === 'en') return q;
+      if (h === 'vi' || h === 'en') return h;
+      return (navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en';
+    }
+
+    function setLang(lang) {
+      root.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
+      });
+      document.title = lang === 'vi'
+        ? 'Chính sách quyền riêng tư – Tian Note'
+        : 'Privacy Policy – Tian Note';
+    }
+
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-set-lang');
+        setLang(lang);
+        try { history.replaceState(null, '', '#' + lang); } catch (e) {}
+      });
+    });
+
+    setLang(pick());
+  })();
+</script>
+</body>
+</html>

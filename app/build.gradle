@@ -28,7 +28,7 @@ android {
         // Google Play requirement is 36; 37 opts in to Android 17 behavior changes
         targetSdk = 36
         versionCode = 4
-        versionName = "1.0.1"
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- MainActivity is portrait-locked, which implies a required portrait screen.
+         Mark it optional so Play doesn't hide the app from landscape-only devices. -->
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+
     <application
         android:name="com.vanthien113.tiannote.presentation.App"
         android:allowBackup="true"

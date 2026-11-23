@@ -12,10 +12,11 @@
 #   public *;
 #}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Keep line numbers so crash stack traces can be deobfuscated with the mapping
+# file (AGP bundles it into the AAB, so Play picks it up automatically).
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Navigation resolves nav-graph argTypes by name at runtime (Class.forName),
+# so their class names must survive obfuscation. See main_nav_graph.xml.
+-keepnames class com.vanthien113.tiannote.presentation.model.NoteModel
